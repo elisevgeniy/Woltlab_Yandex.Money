@@ -20,11 +20,13 @@
             <option name="ym_commission_ym">
                 <categoryname>com.woltlab.wcf.payment.method.yandexmoney</categoryname>
                 <optiontype>float</optiontype>
+                <defaultvalue>0.005</defaultvalue>
             </option>
 
             <option name="ym_commission_bank_card">
                 <categoryname>com.woltlab.wcf.payment.method.yandexmoney</categoryname>
                 <optiontype>float</optiontype>
+                <defaultvalue>0.02</defaultvalue>
             </option>
         </options>
     </import>
