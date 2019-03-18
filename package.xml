@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="ga.kusok-piro.paymant.yandexmoney" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/package.xsd">
+    <packageinformation>
+        <packagename><![CDATA[Paymant for YadexMoney]]></packagename>
+        <packagedescription><![CDATA[Package for paymant for YadexMoney]]></packagedescription>
+        <version>3.1.1</version>
+        <date>2019-03-18</date>
+    </packageinformation>
+
+    <authorinformation>
+        <author><![CDATA[elisevgeniy]]></author>
+        <authorurl><![CDATA[http://kusok-piro.ga/]]></authorurl>
+    </authorinformation>
+
+    <requiredpackages>
+        <requiredpackage minversion="3.0.1">com.woltlab.wcf</requiredpackage>
+    </requiredpackages>
+	
+    <instructions type="install">
+        <instruction type="file">files.tar</instruction>
+        <instruction type="option">option.xml</instruction>	
+        <instruction type="objectType">objectType.xml</instruction>
+        <instruction type="language">language/*.xml</instruction>
+    </instructions>
+	
+	<instructions type="update" fromversion="3.1.0">
+        <instruction type="file">files.tar</instruction>
+	</instructions>
+
+	<instructions type="update" fromversion="3.0.0">
+        <instruction type="file">files.tar</instruction>
+        <instruction type="option">option.xml</instruction>
+        <instruction type="language">language/*.xml</instruction>
+	</instructions>
+</package>

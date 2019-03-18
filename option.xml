@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/option.xsd">
+    <import>
+        <categories>
+            <category name="com.woltlab.wcf.payment.method.yandexmoney">
+                <parent>general.payment</parent>
+            </category>
+        </categories>
+        <options>
+            <option name="ym_wallet">
+                <categoryname>com.woltlab.wcf.payment.method.yandexmoney</categoryname>
+                <optiontype>text</optiontype>
+            </option>
+            
+            <option name="ym_secret">
+                <categoryname>com.woltlab.wcf.payment.method.yandexmoney</categoryname>
+                <optiontype>text</optiontype>
+            </option>
+
+            <option name="ym_commission_ym">
+                <categoryname>com.woltlab.wcf.payment.method.yandexmoney</categoryname>
+                <optiontype>float</optiontype>
+            </option>
+
+            <option name="ym_commission_bank_card">
+                <categoryname>com.woltlab.wcf.payment.method.yandexmoney</categoryname>
+                <optiontype>float</optiontype>
+            </option>
+        </options>
+    </import>
+</data>

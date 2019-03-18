@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/language.xsd" languagecode="en">
+    <category name="wcf.payment">
+        <item name="wcf.payment.ga.kusok-piro.paymant.method.yandexmoney"><![CDATA[Yandex.Money]]></item>
+        <item name="wcf.payment.yandexmoney.button.subscribe.yandexmoney"><![CDATA[Pay by Yandex.Money]]></item>
+        <item name="wcf.payment.yandexmoney.button.subscribe.card"><![CDATA[Pay by Bank card]]></item>
+        <item name="wcf.payment.yandexmoney.button.subscribe.mobile"><![CDATA[Pay by Mobile]]></item>
+    </category>
+    
+    <category name="wcf.acp.option">
+        <item name="wcf.acp.option.category.com.woltlab.wcf.payment.method.yandexmoney"><![CDATA[Yandex.Money Settings]]></item>
+        <item name="wcf.acp.option.ym_secret"><![CDATA[Secret code (you can take it from <a href="{@$__wcf->getPath()}acp/dereferrer.php?url={'https://money.yandex.ru/myservices/online.xml'|rawurlencode}" class="externalURL">link</a>)]]></item>
+        <item name="wcf.acp.option.ym_wallet"><![CDATA[Wallet number]]></item>
+        <item name="wcf.acp.option.ym_commission_ym"><![CDATA[Commission when paying with Yandex.Money]]></item>
+        <item name="wcf.acp.option.ym_commission_bank_card"><![CDATA[Commission when paying with a bank card]]></item>
+    </category>
+</language>
