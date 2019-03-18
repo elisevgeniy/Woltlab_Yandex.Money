@@ -1,6 +1,4 @@
 # Woltlab_Yandex.Money
-
-wbbaddons/Dummy-App 
 ===================
 [![Build Status](https://travis-ci.org/wbbaddons/Dummy-App.png?branch=master)](https://travis-ci.org/wbbaddons/Dummy-App)
 
