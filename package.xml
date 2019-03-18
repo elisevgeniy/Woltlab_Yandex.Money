@@ -3,7 +3,7 @@
     <packageinformation>
         <packagename><![CDATA[Paymant for YadexMoney]]></packagename>
         <packagedescription><![CDATA[Package for paymant for YadexMoney]]></packagedescription>
-        <version>3.1.1</version>
+        <version>3.1.2</version>
         <date>2019-03-18</date>
     </packageinformation>
 
@@ -23,6 +23,10 @@
         <instruction type="language">language/*.xml</instruction>
     </instructions>
 	
+	<instructions type="update" fromversion="3.1.1">
+        <instruction type="option">option.xml</instruction>
+	</instructions>
+
 	<instructions type="update" fromversion="3.1.0">
         <instruction type="file">files.tar</instruction>
 	</instructions>
