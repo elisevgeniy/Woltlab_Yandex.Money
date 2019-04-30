@@ -28,6 +28,8 @@ class YandexmoneyCallbackAction extends AbstractAction {
     public function execute() {
         parent::execute();
 
+        file_put_contents('log.txt',var_export($_POST,true));
+
         $secret = YM_SECRET; // секрет, который мы получили в первом шаге от яндекс.
         // check response
         $processor = null;

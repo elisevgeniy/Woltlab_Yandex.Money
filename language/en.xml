@@ -11,7 +11,7 @@
         <item name="wcf.acp.option.category.com.woltlab.wcf.payment.method.yandexmoney"><![CDATA[Yandex.Money Settings]]></item>
         <item name="wcf.acp.option.ym_secret"><![CDATA[Secret code (you can take it from <a href="{@$__wcf->getPath()}acp/dereferrer.php?url={'https://money.yandex.ru/myservices/online.xml'|rawurlencode}" class="externalURL">link</a>)]]></item>
         <item name="wcf.acp.option.ym_wallet"><![CDATA[Wallet number]]></item>
-        <item name="wcf.acp.option.ym_commission_ym"><![CDATA[Commission when paying with Yandex.Money]]></item>
-        <item name="wcf.acp.option.ym_commission_bank_card"><![CDATA[Commission when paying with a bank card]]></item>
+        <item name="wcf.acp.option.ym_commission_ym"><![CDATA[Commission when paying with Yandex.Money, %]]></item>
+        <item name="wcf.acp.option.ym_commission_bank_card"><![CDATA[Commission when paying with a bank card, %]]></item>
     </category>
 </language>

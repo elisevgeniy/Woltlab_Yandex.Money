@@ -53,6 +53,10 @@ class YandexmoneyPaymentMethod extends AbstractPaymentMethod {
             $button_code = '';
 
             if (YM_SECRET != '' && YM_WALLET != '') {
+
+                $cost_ym = round($cost + $cost * (YM_COMMISSION_YM/100 / (1 + YM_COMMISSION_YM/100) ),2);
+                $cost_card = round($cost / (1 - YM_COMMISSION_BANK_CARD/100),2);
+
                 $button_code = '<form data-bem="{&quot;form&quot;:{}}" method="POST" '
                     . 'target="_blank" action="https://money.yandex.ru/quickpay/confirm.xml">'
                     . '<input class="native-input native-input_type_hidden" name="quickpay-form" value="small" type="hidden">'
@@ -60,14 +64,14 @@ class YandexmoneyPaymentMethod extends AbstractPaymentMethod {
                     . '<input class="native-input native-input_type_hidden" name="paymentType" value="PC" type="hidden">'
                     . '<input class="native-input native-input_type_hidden" name="receiver" value="' . StringUtil::encodeHTML(YM_WALLET) . '" type="hidden">'
                     . '<input class="native-input native-input_type_hidden" name="targets" value="' . StringUtil::encodeHTML($name) . '" type="hidden">'
-                    . '<input class="native-input native-input_type_hidden" name="sum" value="' . round($cost + $cost * (YM_COMMISSION_YM / (1 + YM_COMMISSION_YM) ),2) . '" type="hidden">'
+                    . '<input class="native-input native-input_type_hidden" name="sum" value="' . $cost_ym . '" type="hidden">'
                     . '<input class="native-input native-input_type_hidden" name="successURL" value="' . $returnURL . '" type="hidden">'
                     . '<input class="native-input native-input_type_hidden" name="referer" value="' . StringUtil::encodeHTML(LinkHandler::getInstance()->getLink('PaidSubscriptionList', array('appendSession' => false))) . '" type="hidden">'
                     . '<input class="native-input native-input_type_hidden" name="need-email" value="true" type="hidden">'
                     . '<input class="native-input native-input_type_hidden" name="label" value="' . $label . '" type="hidden">'
                     . '<div class="widget-small__button">'
                     . '<button class="small" data-bem="{&quot;button2&quot;:{&quot;_tabindex&quot;:&quot;0&quot;}}" type="submit" autocomplete="off" tabindex="0">'
-                    . '<span class="button2__text">' . WCF::getLanguage()->get('wcf.payment.yandexmoney.button.subscribe.yandexmoney') . '</span>'
+                    . '<span class="button2__text">' . WCF::getLanguage()->get('wcf.payment.yandexmoney.button.subscribe.yandexmoney') . ' (' . $cost_ym . 'р.)</span>'
                     . '</button>'
                     . '</div>'
                     . '</form>'
@@ -78,14 +82,14 @@ class YandexmoneyPaymentMethod extends AbstractPaymentMethod {
                     . '<input class="native-input native-input_type_hidden" name="paymentType" value="AC" type="hidden">'
                     . '<input class="native-input native-input_type_hidden" name="receiver" value="' . StringUtil::encodeHTML(YM_WALLET) . '" type="hidden">'
                     . '<input class="native-input native-input_type_hidden" name="targets" value="' . StringUtil::encodeHTML($name) . '" type="hidden">'
-                    . '<input class="native-input native-input_type_hidden" name="sum" value="' . round($cost * (1 + YM_COMMISSION_BANK_CARD),2) . '" type="hidden">'
+                    . '<input class="native-input native-input_type_hidden" name="sum" value="' . $cost_card . '" type="hidden">'
                     . '<input class="native-input native-input_type_hidden" name="successURL" value="' . $returnURL . '" type="hidden">'
                     . '<input class="native-input native-input_type_hidden" name="referer" value="' . StringUtil::encodeHTML(LinkHandler::getInstance()->getLink('PaidSubscriptionList', array('appendSession' => false))) . '" type="hidden">'
                     . '<input class="native-input native-input_type_hidden" name="need-email" value="true" type="hidden">'
                     . '<input class="native-input native-input_type_hidden" name="label" value="' . $label . '" type="hidden">'
                     . '<div class="widget-small__button">'
                     . '<button class="small" data-bem="{&quot;button2&quot;:{&quot;_tabindex&quot;:&quot;0&quot;}}" type="submit" autocomplete="off" tabindex="0">'
-                    . '<span class="button2__text">' . WCF::getLanguage()->get('wcf.payment.yandexmoney.button.subscribe.card') . '</span>'
+                    . '<span class="button2__text">' . WCF::getLanguage()->get('wcf.payment.yandexmoney.button.subscribe.card') . ' ('. $cost_card . 'р.)</span>'
                     . '</button>'
                     . '</div>'
                     . '</form>'

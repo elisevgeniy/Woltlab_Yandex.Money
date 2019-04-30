@@ -3,15 +3,15 @@
     <category name="wcf.payment">
         <item name="wcf.payment.ga.kusok-piro.paymant.method.yandexmoney"><![CDATA[Яндекс.Деньги]]></item>
         <item name="wcf.payment.yandexmoney.button.subscribe.yandexmoney"><![CDATA[Оплатить Яндекс.Деньгами]]></item>
-        <item name="wcf.payment.yandexmoney.button.subscribe.card"><![CDATA[Оплатить картой через Яндекс.Деньги]]></item>
-        <item name="wcf.payment.yandexmoney.button.subscribe.mobile"><![CDATA[Оплатить со счёта моб. тел. через Яндекс.Деньги]]></item>
+        <item name="wcf.payment.yandexmoney.button.subscribe.card"><![CDATA[Оплатить банковской картой]]></item>
+        <item name="wcf.payment.yandexmoney.button.subscribe.mobile"><![CDATA[Оплатить со счёта моб. тел.]]></item>
     </category>
     
     <category name="wcf.acp.option">
         <item name="wcf.acp.option.category.com.woltlab.wcf.payment.method.yandexmoney"><![CDATA[Настройки Яндекс.Денег]]></item>
         <item name="wcf.acp.option.ym_secret"><![CDATA[Секрет (можно получить <a href="{@$__wcf->getPath()}acp/dereferrer.php?url={'https://money.yandex.ru/myservices/online.xml'|rawurlencode}" class="externalURL">здесь</a>)]]></item>
         <item name="wcf.acp.option.ym_wallet"><![CDATA[Номер кошелька]]></item>
-        <item name="wcf.acp.option.ym_commission_ym"><![CDATA[Комиссия при оплате с Яндекс.Денег]]></item>
-        <item name="wcf.acp.option.ym_commission_bank_card"><![CDATA[Комиссия при оплате с банковской карты]]></item>
+        <item name="wcf.acp.option.ym_commission_ym"><![CDATA[Комиссия при оплате с Яндекс.Денег, %]]></item>
+        <item name="wcf.acp.option.ym_commission_bank_card"><![CDATA[Комиссия при оплате с банковской карты, %]]></item>
     </category>
 </language>
